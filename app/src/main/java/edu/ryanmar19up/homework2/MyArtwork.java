@@ -12,8 +12,17 @@ import android.view.SurfaceView;
  */
 
 public class MyArtwork extends SurfaceView {
+
+    public MyArtwork(Context context){
+        super(context);
+        setWillNotDraw(false);
+    }
     public MyArtwork(Context context, AttributeSet attrs) {
         super(context, attrs);
+        setWillNotDraw(false);
+    }
+    public MyArtwork(Context context, AttributeSet attrs, int defStyleAttr){
+        super(context, attrs, defStyleAttr);
         setWillNotDraw(false);
     }
 
@@ -24,7 +33,8 @@ public class MyArtwork extends SurfaceView {
         //CustomElement square = new CustomRect("Square", 0xFFFFFFFF, 50,50,100,100);
         Paint magentaPaint = new Paint();
         magentaPaint.setColor(Color.MAGENTA);
-        canvas.drawCircle(100, 100, 50, magentaPaint);
+        magentaPaint.setStyle(Paint.Style.FILL);
+        canvas.drawCircle(10, 10, 5, magentaPaint);
 
     }//onDraw
 

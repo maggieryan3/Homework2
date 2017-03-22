@@ -19,53 +19,58 @@
         android:layout_marginTop="19dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_height="250dp" />
+        android:layout_height="500dp" />
 
     <SeekBar
-        android:layout_width="275dp"
-        android:layout_height="50dp"
         android:layout_below="@+id/surfaceView"
         android:id="@+id/redSB"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@android:color/holo_red_dark" />
+        android:background="@color/red"
+        android:layout_width="600dp"
+        android:layout_height="80dp" />
 
     <SeekBar
-        android:layout_width="275dp"
-        android:layout_height="50dp"
         android:layout_below="@+id/redSB"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:id="@+id/blueSB"
-        android:background="@android:color/holo_green_light" />
+        android:background="@color/green"
+        android:layout_width="600dp"
+        android:layout_height="80dp" />
 
     <SeekBar
-        android:layout_height="50dp"
         android:layout_below="@+id/blueSB"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:id="@+id/greenSB"
-        android:layout_width="275dp"
-        android:background="@android:color/holo_blue_light" />
+        android:background="@color/blue"
+        android:layout_width="600dp"
+        android:layout_height="80dp" />
 
     <TextView
         android:text="Current Element: "
         android:layout_width="match_parent"
-        android:layout_height="50dp"
         android:layout_below="@+id/greenSB"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/curElem" />
+        android:id="@+id/curElem"
+        android:layout_height="100dp"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"
+        android:textStyle="normal|bold" />
 
     <TextView
         android:text="Blue:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/blueSB"
-        android:layout_toRightOf="@+id/greenSB"
         android:layout_toEndOf="@+id/greenSB"
         android:layout_marginTop="14dp"
-        android:id="@+id/greenTV" />
+        android:id="@+id/greenTV"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        android:layout_toRightOf="@+id/greenSB" />
 
     <TextView
         android:text="Red: "
@@ -76,7 +81,9 @@
         android:layout_marginBottom="11dp"
         android:id="@+id/redTV"
         android:layout_alignRight="@+id/blueTV"
-        android:layout_alignEnd="@+id/blueTV" />
+        android:layout_alignEnd="@+id/blueTV"
+        android:textColor="@android:color/black"
+        android:textSize="25sp" />
 
     <TextView
         android:text="Green"
@@ -86,5 +93,7 @@
         android:id="@+id/blueTV"
         android:layout_above="@+id/greenSB"
         android:layout_toRightOf="@+id/blueSB"
-        android:layout_toEndOf="@+id/blueSB" />
+        android:layout_toEndOf="@+id/blueSB"
+        android:textColor="@android:color/black"
+        android:textSize="25sp" />
 </RelativeLayout>
