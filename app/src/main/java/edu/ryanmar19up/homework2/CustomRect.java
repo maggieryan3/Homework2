@@ -18,7 +18,7 @@ import android.graphics.Rect;
  *
  */
 
-public class CustomRect extends CustomElement {
+public class CustomRect extends CustomElement  {
 
     /** the position and size of the rectangle is stored here */
     protected Rect myRect;

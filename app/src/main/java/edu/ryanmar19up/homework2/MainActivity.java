@@ -6,15 +6,26 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.SurfaceView;
+import android.widget.SeekBar;
 
 public class MainActivity extends AppCompatActivity {
+
+    public CustomElement selectedElement;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        SurfaceView sv = (SurfaceView) (findViewById(R.id.surfaceView));
-        //MyArtwork art = new MyArtwork(Context, AttributeSet);
 
+        MyArtwork sv = (MyArtwork) (findViewById(R.id.surfaceView));
+        sv.setOnTouchListener(new TouchListener());
+
+        SeekBar redSeekbar = (SeekBar)(findViewById(R.id.redSB));
+        SeekBar greenSeekbar = (SeekBar)(findViewById(R.id.greenSB));
+        SeekBar blueSeekbar = (SeekBar)(findViewById(R.id.blueSB));
+        redSeekbar.setOnSeekBarChangeListener(new SeekbarListener());
+        blueSeekbar.setOnSeekBarChangeListener(new SeekbarListener());
+        greenSeekbar.setOnSeekBarChangeListener(new SeekbarListener());
     }
+
 }

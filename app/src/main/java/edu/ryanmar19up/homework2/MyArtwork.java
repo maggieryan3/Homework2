@@ -29,12 +29,12 @@ public class MyArtwork extends SurfaceView {
     @Override
     public void onDraw(Canvas canvas)
     {
-        //CustomElement circle = new CustomCircle("Circle", 0xFFFFFFFF, 10, 10, 5);
-        //CustomElement square = new CustomRect("Square", 0xFFFFFFFF, 50,50,100,100);
-        Paint magentaPaint = new Paint();
-        magentaPaint.setColor(Color.MAGENTA);
-        magentaPaint.setStyle(Paint.Style.FILL);
-        canvas.drawCircle(10, 10, 5, magentaPaint);
+        CustomElement circle = new CustomCircle("Circle", 0xFFFF0000, 200, 200, 100);
+        circle.drawMe(canvas);
+
+        CustomElement square = new CustomRect("Square", 0xFFFFFFFF, 100, 400, 300, 600);
+        square.drawMe(canvas);
+
 
     }//onDraw
 
