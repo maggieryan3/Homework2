@@ -5,7 +5,8 @@ import android.util.AttributeSet;
 import android.widget.ImageButton;
 
 /**
- * Created by maggi on 3/25/2017.
+ * @author Maggie Ryan
+ * @date 03/25/2017
  */
 
 public class Drawing extends ImageButton {

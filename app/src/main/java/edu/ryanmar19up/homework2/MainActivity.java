@@ -18,7 +18,13 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import static android.R.attr.author;
 import static android.R.id.progress;
+
+/**
+ * @author Maggie Ryan
+ * @date 03/25/2017
+ */
 
 public class MainActivity extends AppCompatActivity {
 
